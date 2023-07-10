@@ -2,8 +2,11 @@
 2.9‘’ E-ink paper UI system with micropython running on ESP32
 
 硬件：2.9寸墨水屏WFT0290CZ10LP
+
 MCU：ESP32S2 或 ESP32S3
+
 键盘：3键以上，8键以下开关键盘
+
 
 ![image](https://github.com/foxmale007/epui/blob/main/screenshot/hardware.jpg)
 
