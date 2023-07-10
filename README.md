@@ -8,6 +8,7 @@ MCU：ESP32S2 或 ESP32S3
 ![image](https://github.com/foxmale007/epui/blob/main/screenshot/hardware.jpg)
 
 运行快照：
+
 ![image](https://github.com/foxmale007/epui/blob/main/screenshot/snap20230710144713.png)
 
 ![image](https://github.com/foxmale007/epui/blob/main/screenshot/snap20230710143945.png)
