@@ -1,0 +1,95 @@
+[{
+	"clock": {
+		"clock_bg": "clock01.bmp.gz",
+		"num_space": 10,
+		"num_y": 6,
+		"num_color": 1,
+		"num_x": 21,
+		"y": 8,
+		"x": 29,
+		"num_font": "IMP24"
+	},
+	"author": "官方",
+	"slider": {
+		"y": 50,
+		"x": 10
+	},
+	"extra_fonts": {
+		"IMP24": "impact24-num-r.bmf.gz"
+	},
+	"theme_name": "系统默认",
+	"desc": "官方主题",
+	"theme_id": "theme1",
+	"bg_img": "desk01.bmp.gz",
+	"active": false
+}, {
+	"clock": {
+		"x": 161,
+		"y": 0,
+		"clock_bg": "clock02.bmp.gz",
+		"week_color": 0,
+		"num_color": 0,
+		"num_font": "CAL32",
+		"num_x": 30,
+		"num_space": 5,
+		"week_font": "MIN14",
+		"week_x": 20,
+		"week_y": 6,
+		"num_y": 21,
+		"week_type": 0
+	},
+	"author": "官方",
+	"slider": {
+		"y": 50,
+		"x": 10
+	},
+	"extra_fonts": {
+		"CAL32": "calculatrix-7-2_32-en-r.bmf.gz"
+	},
+	"theme_name": "校园记忆",
+	"desc": "记忆中的印象",
+	"theme_id": "theme2",
+	"bg_img": "desk02.bmp.gz",
+	"active": false
+}, {
+	"clock": {
+		"class": "UserClock1"
+	},
+	"author": "官方",
+	"slider": {
+		"y": 50,
+		"x": 10
+	},
+	"extra_fonts": {
+		"CAL32": "calculatrix-7-2_32-en-r.bmf.gz"
+	},
+	"theme_name": "打工族盒饭",
+	"desc": "每周每一天不同的心情",
+	"theme_id": "dgzhf",
+	"bg_img": "desk02.bmp.gz",
+	"active": false
+}, {
+	"clock": {
+		"clock_bg": "clock03.bmp.gz",
+		"num_space": 8,
+		"num_y": 2,
+		"num_color": 0,
+		"num_x": 17,
+		"y": 5,
+		"x": 10,
+		"num_font": "LXK36"
+	},
+	"author": "官方",
+	"slider": {
+		"y": 50,
+		"x": 10
+	},
+	"extra_fonts": {
+		"LXK36": "LXKSimple36-num-r.bmf.gz"
+	},
+	"theme_name": "自定义",
+	"desc": "改过壁纸或者采用自定义参数保存至此主题",
+	"theme_id": "custom",
+	"bg_img": "hetang.bmp.gz",
+	"active": true
+}]

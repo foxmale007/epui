@@ -1,0 +1,40 @@
+{
+    "dynamic_by_usage": false,
+    "home_item_conf": [{
+        "name": "clock",
+        "pin_pos": -1,
+        "usage": 0
+    },{
+        "name": "ebook",
+        "pin_pos": -1,
+        "usage": 0
+    },{
+        "name": "edict",
+        "pin_pos": -1,
+        "usage": 0
+    },{
+        "name": "quickcalendar",
+        "pin_pos": -1,
+        "usage": 0
+    },{
+        "name": "quickcalc",
+        "pin_pos": -1,
+        "usage": 0
+    },{
+        "name": "sudoku",
+        "pin_pos": -1,
+        "usage": 0
+    },{
+        "name": "wificonf",
+        "pin_pos": -1,
+        "usage": 0
+    },{
+        "name": "modulemng",
+        "pin_pos": 8,
+        "usage": 0
+    },{
+        "name": "sysconf",
+        "pin_pos": 9,
+        "usage": 0
+    }]
+}
