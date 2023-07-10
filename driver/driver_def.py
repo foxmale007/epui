@@ -43,7 +43,7 @@ SD_MISO_PIN = 38
 SD_CS_PIN = 39
 SD_BAUD = 5000_0000
 
-# 快照键KEY_RETURN，长按3秒激活，截取快照到/snapshot
+# 快照键KEY_SPACE，长按3秒激活，截取快照到/snapshot
 SNAP_TRIGGER_FREQ_MS = 3000     # 长按激活的时长
 
 # 电量采集量和电池容量映射关系，根据实际电池特性调整
