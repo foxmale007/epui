@@ -1,7 +1,7 @@
 from widgets.draw import Canvas
 from lib.uiConst import *
 from lib.mpy_calendar import LunarDate
-import utime
+import lib.time as time
 from lib.ufontMem import fonts, BMFont
 
 import math
@@ -64,7 +64,7 @@ class ChineaseCalender(Canvas):
             nonlocal self
             def go_prev_month():
                 nonlocal self
-                prev_time = utime.localtime(utime.mktime((self.year, self.month - 1, 1, 0, 0, 0, -1, -1)))  # 上个月1号
+                prev_time = time.localtime(time.mktime((self.year, self.month - 1, 1, 0, 0, 0, -1, -1)))  # 上个月1号
                 if prev_time[0] <= 2000:
                     return
                 self.year = prev_time[0]
@@ -74,7 +74,7 @@ class ChineaseCalender(Canvas):
 
             def go_next_month():
                 nonlocal self
-                next_time = utime.localtime(utime.mktime((self.year, self.month + 2, 0, 0, 0, 0, -1, -1)))  # 下个月最后一天
+                next_time = time.localtime(time.mktime((self.year, self.month + 2, 0, 0, 0, 0, -1, -1)))  # 下个月最后一天
                 if next_time[0] >= 2100:
                     return
                 self.year = next_time[0]
@@ -111,8 +111,8 @@ class ChineaseCalender(Canvas):
                 if continuous:  # 长按换年
                     if self.year <= 2001:
                         return
-                    prev_time = utime.localtime(
-                        utime.mktime((self.year - 1, self.month + 2, 0, 0, 0, 0, -1, -1)))  # 前一年同月第一天
+                    prev_time = time.localtime(
+                        time.mktime((self.year - 1, self.month + 2, 0, 0, 0, 0, -1, -1)))  # 前一年同月第一天
                     self.year = prev_time[0]
                     self.month = prev_time[1]
                     self.day = prev_time[2]
@@ -129,8 +129,8 @@ class ChineaseCalender(Canvas):
                 if continuous:  # 长按换年
                     if self.year >= 2099:
                         return
-                    next_time = utime.localtime(
-                        utime.mktime((self.year + 1, self.month + 1, 0, 0, 0, 0, -1, -1)))  # 后一年同月最后一天
+                    next_time = time.localtime(
+                        time.mktime((self.year + 1, self.month + 1, 0, 0, 0, 0, -1, -1)))  # 后一年同月最后一天
                     self.year = next_time[0]
                     self.month = next_time[1]
                     self.day = next_time[2]
@@ -228,8 +228,8 @@ class ChineaseCalender(Canvas):
 
     def update(self) -> None:
         # 计算
-        self.max_day = utime.localtime(utime.mktime((self.year, self.month + 1, 0, 0, 0, 0, -1, -1)))[2]
-        self.week_align = utime.localtime(utime.mktime((self.year, self.month, 1, 1, 0, 0, -1, -1)))[6]
+        self.max_day = time.localtime(time.mktime((self.year, self.month + 1, 0, 0, 0, 0, -1, -1)))[2]
+        self.week_align = time.localtime(time.mktime((self.year, self.month, 1, 1, 0, 0, -1, -1)))[6]
         self.lunars = [LunarDate.fromSolarDate(self.year, self.month, day + 1) for day in range(self.max_day)]  # 农历
         self.sonars = [(self.year, self.month, day + 1) for day in range(self.max_day)]     # 公历
         self.__fill_day_info()

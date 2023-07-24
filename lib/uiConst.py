@@ -1,13 +1,7 @@
 from micropython import const
 import gc
 import sys
-
-# 检查内存，至少2M才可以运行
-total_mem = gc.mem_alloc()+gc.mem_free()
-if gc.mem_alloc()+gc.mem_free() < 2048000:
-    print(f'[EPUI] Fatal error: total memory({total_mem}) lower than 2M. Exit.')
-    sys.exit(1)
-del total_mem
+from lib.epui import *
 
 DEBUG: int = True   # 是否调试（开启快照，开启日志打印）
 
@@ -59,13 +53,18 @@ HALIGN_CENTER = const(1)
 HALIGN_RIGHT = const(2)
 
 # 键盘键定义，8键无冲组合
-KEY_LEFT = const(0x20)  # Left ←
-KEY_UP = const(0x04)  # UP ↑
-KEY_RIGHT = const(0x08)  # DOWN ←
-KEY_DOWN = const(0x10)  # Left ←
-KEY_OK = const(0x01)  # confirm/enter
-KEY_RETURN = const(0x02)  # ESC
-KEY_SPACE = const(0x40)  # SPACE
+KEY_OK = const(1)  # confirm/enter
+KEY_RETURN = const(2)  # ESC
+
+KEY_UP = const(3)  # UP ↑
+KEY_RIGHT = const(4)  # DOWN ↓
+KEY_DOWN = const(5)  # Left ←
+KEY_LEFT = const(6)  # Left ←
+KEY_SPACE = const(7)  # SPACE
+
+KEK_VOL_UP = const(8)  # 音量+
+KEY_VOL_DOWN = const(9)  # 音量-
+KEY_EARPHONE = const(10)  # 耳机插入
 
 # 箭头方向
 ARROW_UP = const(0x01)
@@ -86,12 +85,12 @@ BUTTON_ALIGN_CENTER = const(1)
 BUTTON_ALIGN_RIGHT = const(2)
 
 # 几个系统内置字体
-FONT_MIN_EN = const('MIN14')
+FONT_MIN_EN = 'MIN14'
 FONT_16 = const(16)
 FONT_12 = const(12)
 
 # 增补字体，需要时自己初始化
-FONT_ARIAL_BLACK_14 = const('ARI14')
+FONT_ARIAL_BLACK_14 = 'ARI14'
 
 WEEK_DAYS_CN = ('一', '二', '三', '四', '五', '六', '日')
 WEEK_DAYS_EN = ('MON', 'TUE', 'WED', 'THUR', 'FRI', 'SAT', 'SUN')

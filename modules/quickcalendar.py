@@ -4,7 +4,7 @@ from lib.ufontMem import BMFont
 from driver.display import screen
 from lib.uiConst import *
 from m_quickcalendar.chinease_calender import ChineaseCalender
-import utime
+import lib.time as time
 
 
 class Quickcalendar(EPApp):
@@ -29,7 +29,7 @@ class Quickcalendar(EPApp):
         该部分代码在进入模块时执行，绘制模块界面，注册键盘事件等
         :param body: 主显示区块Layer
         """
-        calender = ChineaseCalender(utime.localtime(), tabindex=1)
+        calender = ChineaseCalender(time.localtime(), tabindex=1)
         return_button = TextButton('退出', 34, 16, mode=BTN_INVERT, tabindex=3,
                                    click_handler=self.go_back)
 

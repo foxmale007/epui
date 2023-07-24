@@ -1,5 +1,5 @@
-import uasyncio as asyncio
-import utime
+import lib.asyncio as asyncio
+import lib.time as time
 
 from tests.eptest import eptest
 from lib.uiConst import *
@@ -243,7 +243,7 @@ async def test_timer_with_widget(body: Layer):
     body.add_child(label2, 0, 50)
 
     def time_func2():
-        text = '{:04d}年{:02d}月{:02d}日 {:02d}:{:02d}:{:02d} 周{:02d}'.format(*utime.localtime())
+        text = '{:04d}年{:02d}月{:02d}日 {:02d}:{:02d}:{:02d} 周{:02d}'.format(*time.localtime())
         if text != label2.text:
             label2.text = text
 
@@ -480,4 +480,4 @@ async def test_snapshot(body: Layer):
     snap_text.text = '快照保存至:' + take_snapshot()
 
 if __name__ == '__main__':
-    test_progress()
+    test_canvas2()
