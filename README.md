@@ -3,10 +3,18 @@
 
 硬件：2.9寸墨水屏WFT0290CZ10LP
 
-MCU：ESP32S2 或 ESP32S3
+MCU：ESP32S2
 
 键盘：3键以上，8键以下开关键盘
 
+同时支持MicroPython及Circuitpython（如果要使用声音驱动需使用Circuitpython）
+
+特性：
+1. 基于framebuffer的ui库驱动。包括固定位置模型、横向盒模型、纵向盒模型、画布、文本标签、进度条、图片及文本按钮（3种样式）、对话框、消息框组件
+2. 整合了Bmp位图（支持gzip压缩，支持透明背景色精灵）和字体驱动（可以自己扩展）
+3. 支持ADC0832模块测量电池电量
+4. 支持SD卡驱动（已改进，防掉卡）
+5. 键盘模块（支持点按，长按，多键同时操作），截屏快照
 
 ![image](https://github.com/foxmale007/epui/blob/main/screenshot/hardware.jpg)
 
@@ -41,3 +49,11 @@ MCU：ESP32S2 或 ESP32S3
 
 ![image](https://github.com/foxmale007/epui/blob/main/screenshot/snap20230710145145.png)
 
+下一步计划：
+
+1. 中文/英文输入法
+2. 输入框组件
+3. 深度休眠
+4. 单词卡学习模块
+5. 英文电子字典模块
+6. 模块市场
