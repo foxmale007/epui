@@ -1,5 +1,8 @@
 # epui
 2.9'' E-ink paper UI system with MicroPython FrameBuffer running on ESP32 boards
+pure python
+
+纯python，100% python代码
 
 硬件：2.9寸墨水屏WFT0290CZ10LP
 
