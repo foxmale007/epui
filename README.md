@@ -18,6 +18,7 @@ MCU：ESP32S2
 3. 支持ADC0832模块测量电池电量
 4. 支持SD卡驱动（已改进，防掉卡）
 5. 键盘模块（支持点按，长按，多键同时操作），截屏快照
+6. 支持插件模式开发，只需要将对应文件复制到目录即完成功能扩展
 
 ![image](https://github.com/foxmale007/epui/blob/main/screenshot/hardware.jpg)
 
